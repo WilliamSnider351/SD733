@@ -1,0 +1,110 @@
+/* Base page setup */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #222;
+}
+
+/* Top image and overlay text container */
+.top-image-container {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.top-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 400px; /* limit to a reasonable max height */
+  object-fit: cover;
+}
+
+/* Overlay text centered near bottom of image */
+.overlay-text {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.75);
+  white-space: nowrap;
+  max-width: 90vw;
+}
+
+/* Main content area centered and constrained */
+.content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background-color: #fff;
+}
+
+.content-inner {
+  max-width: 800px;
+  width: 100%;
+}
+
+/* Headings and text styling */
+.content-inner h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.content-inner p {
+  text-align: justify;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.content-inner ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #333;
+  list-style-type: disc;
+}
+
+/* Footer at bottom with subtle styling */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .overlay-text {
+    font-size: 2rem;
+    white-space: normal;
+    max-width: 95vw;
+    padding: 0 10px;
+  }
+  
+  .content-inner h1 {
+    font-size: 1.5rem;
+  }
+  
+  .content-inner p,
+  .content-inner ul {
+    font-size: 0.9rem;
+  }
+}
