@@ -1,0 +1,75 @@
+    html, body {
+      height: 100%;
+      margin: 0;
+      background-color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      color: black;
+    }
+
+    header {
+      position: relative;
+    }
+
+    header img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .header-text {
+      position: absolute;
+      bottom: 0.3in; /* matches schedule.html overlay-text */
+      width: 100%;
+      color: white;
+      font-size: 3.5rem; /* matches schedule.html */
+      font-weight: bold;
+      text-align: center;
+      text-shadow: 2px 2px 6px #000;
+      font-family: Arial, sans-serif;
+    }
+
+    main {
+      background-color: white;
+      color: black;
+      border-radius: 8px;
+      max-width: 700px;
+      margin: 30px auto 40px;
+      padding: 20px 25px;
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 2rem; /* approximate h2 size from schedule.html */
+      margin-bottom: 1.5rem; /* same as schedule.html headings */
+    }
+
+    p {
+      font-family: Arial, sans-serif;
+      text-align: justify;
+      margin-bottom: 1rem;
+    }
+
+    address {
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 2rem;
+      text-align: justify;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 20px 0;
+      text-align: center;
+      background-color: #f8f9fa;
+      font-size: 0.9rem;
+      color: #666;
+      font-family: Arial, sans-serif;
+    }
+  
