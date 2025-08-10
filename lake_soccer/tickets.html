@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lake Ukickee Soccer - Tickets</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="tickets.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Full-width top image with overlay text -->
+  <div class="top-image-container">
+    <img src="images/bleacher.png" alt="Bleacher Seating">
+    <div class="overlay-text">Lake Ukickee Soccer</div>
+  </div>
+
+  <!-- Navbar placeholder -->
+  <div class="navbar-center">
+    <div id="navbar-container" class="w-100"></div>
+  </div>
+
+  <!-- Main content -->
+  <div class="content">
+    <div class="content-inner">
+      <h2>Buy Tickets</h2>
+      <p class="intro-text">
+        Select the game(s) you want to attend, choose the number of tickets, and enter your contact info below.
+        Your tickets will be held at the box office — just bring your ID and the credit card used.
+        Thank you for supporting Lake Ukickee Soccer!
+      </p>
+
+      <form class="row g-3 mx-auto" style="max-width: 800px;" action="ticket_process.php" method="POST">
+
+        <!-- Name -->
+        <div class="col-12">
+          <label for="name" class="form-label">Your Name</label>
+          <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+
+        <!-- Email -->
+        <div class="col-12">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+
+        <!-- Game Tickets Table -->
+        <div class="col-12">
+          <div class="table-responsive">
+            <table class="table table-bordered align-middle text-center bg-white">
+              <thead class="table-dark">
+                <tr>
+                  <th>Select</th>
+                  <th>Game Time</th>
+                  <th>Opponent</th>
+                  <th>Ticket Price</th>
+                  <th>Order Quantity</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox" name="games[]" value="march_31_yucan_village"></td>
+                  <td>March 31, 6:00 PM</td>
+                  <td>Yucan Village</td>
+                  <td>$12.50
+                    <input type="hidden" name="march_31_yucan_village_price" value="12.50">
+                  </td>
+                  <td><input type="number" class="form-control" name="march_31_yucan_village_qty" min="0" value="0"></td>
+                </tr>
+
+                <tr>
+                  <td><input type="checkbox" name="games[]" value="april_1_beach_park"></td>
+                  <td>April 1, 6:00 PM</td>
+                  <td>Beach Park</td>
+                  <td>$10.50
+                    <input type="hidden" name="april_1_beach_park_price" value="10.50">
+                  </td>
+                  <td><input type="number" class="form-control" name="april_1_beach_park_qty" min="0" value="0"></td>
+                </tr>
+
+                <tr>
+                  <td><input type="checkbox" name="games[]" value="april_8_monarch_river"></td>
+                  <td>April 8, 7:00 PM</td>
+                  <td>Monarch River</td>
+                  <td>$10.50
+                    <input type="hidden" name="april_8_monarch_river_price" value="10.50">
+                  </td>
+                  <td><input type="number" class="form-control" name="april_8_monarch_river_qty" min="0" value="0"></td>
+                </tr>
+
+                <tr>
+                  <td><input type="checkbox" name="games[]" value="april_14_sands_resort"></td>
+                  <td>April 14, 6:30 PM</td>
+                  <td>Sands Resort</td>
+                  <td>$12.50
+                    <input type="hidden" name="april_14_sands_resort_price" value="12.50">
+                  </td>
+                  <td><input type="number" class="form-control" name="april_14_sands_resort_qty" min="0" value="0"></td>
+                </tr>
+
+                <tr>
+                  <td><input type="checkbox" name="games[]" value="april_18_harborside"></td>
+                  <td>April 18, 6:00 PM</td>
+                  <td>Harborside</td>
+                  <td>$11.00
+                    <input type="hidden" name="april_18_harborside_price" value="11.00">
+                  </td>
+                  <td><input type="number" class="form-control" name="april_18_harborside_qty" min="0" value="0"></td>
+                </tr>
+
+                <tr>
+                  <td><input type="checkbox" name="games[]" value="april_21_yucan_village"></td>
+                  <td>April 21, 5:00 PM</td>
+                  <td>Yucan Village</td>
+                  <td>$12.50
+                    <input type="hidden" name="april_21_yucan_village_price" value="12.50">
+                  </td>
+                  <td><input type="number" class="form-control" name="april_21_yucan_village_qty" min="0" value="0"></td>
+                </tr>
+
+                <tr>
+                  <td><input type="checkbox" name="games[]" value="april_29_sands_resort"></td>
+                  <td>April 29, 7:00 PM</td>
+                  <td>Sands Resort</td>
+                  <td>$12.50
+                    <input type="hidden" name="april_29_sands_resort_price" value="12.50">
+                  </td>
+                  <td><input type="number" class="form-control" name="april_29_sands_resort_qty" min="0" value="0"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="col-12 text-center">
+          <button type="submit" class="btn btn-success">Purchase Tickets</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    Copyright 2025 Lake Ukickee Soccer
+  </footer>
+
+  <!-- Bootstrap and Navbar JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="nav-module.js"></script>
+  <script>
+    loadNavbar("tickets");
+  </script>
+</body>
+</html>
